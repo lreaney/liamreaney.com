@@ -6,47 +6,87 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
     color: #333;
     padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
+/* Header Styling */
 header {
     text-align: center;
-    padding: 1rem 0;
-    background-color: #fff;
+    padding: 2rem 0;
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    color: #fff;
     margin-bottom: 20px;
-    border-bottom: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    font-size: 2.5rem;
+header h1 {
+    font-size: 3rem;
     margin-bottom: 0.5rem;
+}
+
+.nav-link a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    color: #007BFF;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link a:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/* Section Styling */
+.content-section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 3px solid #007BFF;
     padding-bottom: 0.5rem;
+    color: #0056b3;
 }
 
-.content-section {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
+/* List Styling */
 ul {
-    list-style: square;
-    margin-left: 20px;
-    margin-bottom: 1rem;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
 }
 
+ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+/* Link Styling */
 a {
     color: #007BFF;
     text-decoration: none;
@@ -56,14 +96,28 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Footer Styling */
 footer {
     text-align: center;
     padding-top: 1rem;
     border-top: 1px solid #ddd;
     font-size: 0.9rem;
     color: #666;
+    margin-top: 20px;
 }
 
-.nav-link {
-    text-align: right;
+/* Add Personality */
+body {
+    background: linear-gradient(180deg, #f9f9f9, #e9ecef);
 }
+
+.content-section p {
+    line-height: 1.8;
+    color: #555;
+}
+
+.content-section ul li {
+    font-size: 1rem;
+    color: #333;
+}
+
