@@ -24,7 +24,7 @@
       padding: var(--sp-8);
       display: flex;
       flex-direction: column;
-      gap: var(--sp-4);
+      gap: var(--sp-3);
       transition: border-color var(--ease), box-shadow var(--ease), transform var(--ease);
       text-decoration: none;
       color: inherit;
@@ -58,6 +58,45 @@
       border-radius: 999px;
       white-space: nowrap;
       flex-shrink: 0;
+    }
+    /* Metrics row */
+    .coverage-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      padding-bottom: var(--sp-2);
+      border-bottom: 1px solid var(--border);
+    }
+    .coverage-metric {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .coverage-metric-label {
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-size: 0.65rem;
+      color: var(--text-faint);
+    }
+    .coverage-metric-value {
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .coverage-metric-value.is-placeholder {
+      color: var(--text-faint);
+      font-style: italic;
+    }
+    .coverage-metric-source {
+      font-size: 0.62rem;
+      color: var(--text-faint);
+    }
+    /* Divider between metrics groups */
+    .coverage-metric-sep {
+      color: var(--border);
+      font-weight: 300;
     }
     .coverage-headline {
       font-size: 1rem;
@@ -102,6 +141,11 @@
       color: var(--text-muted);
       margin-top: 4px;
     }
+    .coverage-source-note {
+      font-size: 0.72rem;
+      color: var(--text-faint);
+      margin-top: var(--sp-4);
+    }
     @media (max-width: 640px) {
       .coverage-stats { gap: var(--sp-8); flex-wrap: wrap; }
     }
@@ -136,7 +180,7 @@
   <div class="wrap narrow">
     <span class="kicker">Digital PR</span>
     <h1>Coverage that earns its place.</h1>
-    <p>I've worked on digital PR both in-house and alongside external agencies — developing campaigns, managing outreach, and landing coverage in publications that matter for brand and search alike.</p>
+    <p>I’ve worked on digital PR both in-house and alongside external agencies — developing campaigns, managing outreach, and landing coverage in publications that matter for brand and search alike.</p>
     <div class="header-actions">
       <a href="mailto:contact@liamreaney.com" class="btn-primary">Get in touch</a>
       <a href="/seo/" class="btn-ghost">SEO →</a>
@@ -172,9 +216,16 @@
             <span class="coverage-publication">Metro</span>
             <span class="coverage-tag">Football</span>
           </div>
+          <div class="coverage-metrics">
+            <span class="coverage-metric"><span class="coverage-metric-label">DR</span><span class="coverage-metric-value is-placeholder">—</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">AS</span><span class="coverage-metric-value is-placeholder">—</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">Traffic</span><span class="coverage-metric-value is-placeholder">—/mo</span></span>
+          </div>
           <p class="coverage-headline">Arsenal send message to Manchester United over Myles Lewis-Skelly transfer</p>
           <div class="coverage-meta">
-            <span class="coverage-meta-date">Apr 2026</span>
+            <span>Apr 2026</span>
             <span class="coverage-meta-link">Read article</span>
           </div>
         </a>
@@ -185,9 +236,16 @@
             <span class="coverage-publication">Liverpool.com</span>
             <span class="coverage-tag">Football</span>
           </div>
+          <div class="coverage-metrics">
+            <span class="coverage-metric"><span class="coverage-metric-label">DR</span><span class="coverage-metric-value is-placeholder">—</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">AS</span><span class="coverage-metric-value is-placeholder">—</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">Traffic</span><span class="coverage-metric-value is-placeholder">—/mo</span></span>
+          </div>
           <p class="coverage-headline">Arsenal legend deeply concerned about Arne Slot</p>
           <div class="coverage-meta">
-            <span class="coverage-meta-date">2026</span>
+            <span>2026</span>
             <span class="coverage-meta-link">Read article</span>
           </div>
         </a>
@@ -198,9 +256,16 @@
             <span class="coverage-publication">Football London</span>
             <span class="coverage-tag">Transfer News</span>
           </div>
-          <p class="coverage-headline">Arsenal transfer latest: Myles Lewis-Skelly latest</p>
+          <div class="coverage-metrics">
+            <span class="coverage-metric"><span class="coverage-metric-label">DR</span><span class="coverage-metric-value is-placeholder">—</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">AS</span><span class="coverage-metric-value is-placeholder">—</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">Traffic</span><span class="coverage-metric-value is-placeholder">—/mo</span></span>
+          </div>
+          <p class="coverage-headline">Arsenal transfer latest: Myles Lewis-Skelly</p>
           <div class="coverage-meta">
-            <span class="coverage-meta-date">2026</span>
+            <span>2026</span>
             <span class="coverage-meta-link">Read article</span>
           </div>
         </a>
@@ -211,9 +276,16 @@
             <span class="coverage-publication">Leeds Live</span>
             <span class="coverage-tag">Football</span>
           </div>
+          <div class="coverage-metrics">
+            <span class="coverage-metric"><span class="coverage-metric-label">DR</span><span class="coverage-metric-value is-placeholder">—</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">AS</span><span class="coverage-metric-value is-placeholder">—</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">Traffic</span><span class="coverage-metric-value is-placeholder">—/mo</span></span>
+          </div>
           <p class="coverage-headline">Sky Sports pundit names two Leeds United players</p>
           <div class="coverage-meta">
-            <span class="coverage-meta-date">2026</span>
+            <span>2026</span>
             <span class="coverage-meta-link">Read article</span>
           </div>
         </a>
@@ -224,9 +296,16 @@
             <span class="coverage-publication">Hull Daily Mail</span>
             <span class="coverage-tag">Football</span>
           </div>
-          <p class="coverage-headline">Hull City's automatic promotion credentials assessed</p>
+          <div class="coverage-metrics">
+            <span class="coverage-metric"><span class="coverage-metric-label">DR</span><span class="coverage-metric-value is-placeholder">—</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">AS</span><span class="coverage-metric-value is-placeholder">—</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">Traffic</span><span class="coverage-metric-value is-placeholder">—/mo</span></span>
+          </div>
+          <p class="coverage-headline">Hull City’s automatic promotion credentials assessed</p>
           <div class="coverage-meta">
-            <span class="coverage-meta-date">2026</span>
+            <span>2026</span>
             <span class="coverage-meta-link">Read article</span>
           </div>
         </a>
@@ -237,9 +316,16 @@
             <span class="coverage-publication">Mirror</span>
             <span class="coverage-tag">Football</span>
           </div>
+          <div class="coverage-metrics">
+            <span class="coverage-metric"><span class="coverage-metric-label">DR</span><span class="coverage-metric-value is-placeholder">—</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">AS</span><span class="coverage-metric-value is-placeholder">—</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">Traffic</span><span class="coverage-metric-value is-placeholder">—/mo</span></span>
+          </div>
           <p class="coverage-headline">Wrexham, Ryan Reynolds and Phil Parkinson — inside the story</p>
           <div class="coverage-meta">
-            <span class="coverage-meta-date">2026</span>
+            <span>2026</span>
             <span class="coverage-meta-link">Read article</span>
           </div>
         </a>
@@ -250,9 +336,16 @@
             <span class="coverage-publication">Liverpool Echo</span>
             <span class="coverage-tag">Football</span>
           </div>
+          <div class="coverage-metrics">
+            <span class="coverage-metric"><span class="coverage-metric-label">DR</span><span class="coverage-metric-value is-placeholder">—</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">AS</span><span class="coverage-metric-value is-placeholder">—</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">Traffic</span><span class="coverage-metric-value is-placeholder">—/mo</span></span>
+          </div>
           <p class="coverage-headline">Everton supporters need the team to be horrible again</p>
           <div class="coverage-meta">
-            <span class="coverage-meta-date">2026</span>
+            <span>2026</span>
             <span class="coverage-meta-link">Read article</span>
           </div>
         </a>
@@ -263,14 +356,24 @@
             <span class="coverage-publication">ChronicleLive</span>
             <span class="coverage-tag">Football</span>
           </div>
+          <div class="coverage-metrics">
+            <span class="coverage-metric"><span class="coverage-metric-label">DR</span><span class="coverage-metric-value is-placeholder">—</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">AS</span><span class="coverage-metric-value is-placeholder">—</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">Traffic</span><span class="coverage-metric-value is-placeholder">—/mo</span></span>
+          </div>
           <p class="coverage-headline">Eddie Howe warned over difficult decision ahead</p>
           <div class="coverage-meta">
-            <span class="coverage-meta-date">2026</span>
+            <span>2026</span>
             <span class="coverage-meta-link">Read article</span>
           </div>
         </a>
 
       </div>
+
+      <p class="coverage-source-note">DR: Ahrefs · AS &amp; organic traffic: Semrush. All figures are third-party estimates.</p>
+
     </div>
   </section>
 
@@ -289,7 +392,7 @@
   </section>
 
   <div class="wrap narrow">
-    <div class="detail-card"><span class="label">Focus</span><p>Digital PR campaigns built with a clear connection to brand visibility and organic search performance — not just coverage for coverage's sake.</p></div>
+    <div class="detail-card"><span class="label">Focus</span><p>Digital PR campaigns built with a clear connection to brand visibility and organic search performance — not just coverage for coverage’s sake.</p></div>
     <div class="content-section"><h2>What I can support</h2><p>Campaign development · Media outreach · Digital PR strategy · Creative ideation · Coverage reporting · Link acquisition via PR</p></div>
   </div>
 
