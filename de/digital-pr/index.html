@@ -4,12 +4,113 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Digital PR Berater München — Liam Reaney</title>
-  <meta name="description" content="Digital-PR-Beratung von Liam Reaney in München. Kampagnenstrategie, Outreach und Medienberichterstattung mit messbarem SEO-Einfluss.">
+  <meta name="description" content="Digital-PR-Beratung von Liam Reaney in München. Kampagnenentwicklung, gezielter Outreach und Medienpräsenz, die Marke und organische Suche gleichzeitig stärkt.">
   <link rel="canonical" href="https://liamreaney.com/de/digital-pr/">
   <link rel="alternate" hreflang="en" href="https://liamreaney.com/digital-pr/">
   <link rel="alternate" hreflang="de" href="https://liamreaney.com/de/digital-pr/">
   <link rel="alternate" hreflang="x-default" href="https://liamreaney.com/digital-pr/">
   <link rel="stylesheet" href="../../css/styles.css?v=8">
+  <style>
+    .coverage-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
+      gap: var(--sp-6);
+      margin-top: var(--sp-12);
+    }
+    .coverage-card {
+      background: var(--surface-1);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: var(--sp-8);
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-3);
+      transition: border-color var(--ease), box-shadow var(--ease), transform var(--ease);
+      text-decoration: none;
+      color: inherit;
+    }
+    .coverage-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      transform: translateY(-2px);
+    }
+    .coverage-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--sp-4);
+    }
+    .coverage-publication {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--text);
+    }
+    .coverage-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-dim);
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .coverage-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      padding-bottom: var(--sp-2);
+      border-bottom: 1px solid var(--border);
+    }
+    .coverage-metric { display: flex; align-items: center; gap: 0.3rem; }
+    .coverage-metric-label {
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-size: 0.65rem;
+      color: var(--text-faint);
+    }
+    .coverage-metric-value { font-weight: 600; color: var(--text-muted); }
+    .coverage-metric-value.is-placeholder { color: var(--text-faint); font-style: italic; }
+    .coverage-metric-sep { color: var(--border); font-weight: 300; }
+    .coverage-headline { font-size: 1rem; font-weight: 600; color: var(--text); line-height: 1.4; }
+    .coverage-meta {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-4);
+      font-size: 0.8rem;
+      color: var(--text-faint);
+      margin-top: auto;
+      padding-top: var(--sp-2);
+      border-top: 1px solid var(--border);
+    }
+    .coverage-meta-link { margin-left: auto; color: var(--accent); font-weight: 600; font-size: 0.8rem; }
+    .coverage-meta-link::after { content: ' \2197'; }
+    .coverage-stats {
+      display: flex;
+      gap: var(--sp-12);
+      padding: var(--sp-8) 0;
+      border-top: 1px solid var(--border);
+      margin-top: var(--sp-8);
+    }
+    .cov-stat-num {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      color: var(--text);
+      line-height: 1;
+    }
+    .cov-stat-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 4px; }
+    .coverage-source-note { font-size: 0.72rem; color: var(--text-faint); margin-top: var(--sp-4); }
+    @media (max-width: 640px) { .coverage-stats { gap: var(--sp-8); flex-wrap: wrap; } }
+  </style>
   <script>
     (function(){
       var t = localStorage.getItem('theme');
@@ -38,44 +139,211 @@
     </div>
   </div>
 </nav>
+
 <header class="page-header">
   <div class="wrap narrow">
     <span class="kicker">Digital PR</span>
-    <h1>Coverage, die ihren Platz verdient.</h1>
-    <p>Ich habe Digital PR sowohl inhouse als auch mit externen Agenturen umgesetzt — Kampagnen entwickelt, Outreach geleitet und Coverage in Publikationen erzielt, die für Marke und Suche gleichermaßen relevant sind.</p>
+    <h1>Platzierungen, die sich behaupten.</h1>
+    <p>Ich habe Digital PR sowohl inhouse als auch mit externen Agenturen verantwortet — Kampagnen konzipiert, Outreach gesteuert und Coverage in Publikationen erreicht, die für Marke und Suche gleichermaßen zählen.</p>
     <div class="header-actions">
       <a href="mailto:contact@liamreaney.com" class="btn-primary">Kontakt aufnehmen</a>
       <a href="/de/seo/" class="btn-ghost">SEO →</a>
     </div>
   </div>
 </header>
+
 <main>
+
   <div class="wrap narrow">
-    <div class="content-section"><h2>Kampagnendenken statt Vorlagenausführung</h2><p>Gute Digital PR braucht originelle Ideen und starke redaktionelle Instinkte. Ich entwickle Kampagnen mit echtem Nachrichtenwert — die Art, die Platzierungen verdient, weil Redakteure sie wirklich bringen wollen.</p></div>
-    <div class="content-section"><h2>Outreach, der Beziehungen respektiert</h2><p>Massen-Outreach verbrennt schnell Goodwill. Mein Ansatz ist gezielt, persönlich und darauf ausgerichtet zu verstehen, wonach Journalisten und Redakteure in ihren spezifischen Bereichen suchen.</p></div>
+    <div class="content-section">
+      <h2>Kampagnenstrategie statt Schablone</h2>
+      <p>Gute Digital PR lebt von eigenständigen Ideen und einem sicheren redaktionellen Gespür. Ich entwickle Kampagnen mit echtem Nachrichtenwert — nicht Inhalte, die eine Redaktion toleriert, sondern solche, die sie gern veröffentlicht.</p>
+    </div>
+    <div class="content-section">
+      <h2>Outreach, der Vertrauen aufbaut</h2>
+      <p>Massenversand vergiftet Kontakte schnell. Mein Ansatz ist gezielt, persönlich und darauf ausgelegt zu verstehen, was Journalisten und Redakteure in ihren jeweiligen Ressorts tatsächlich gebrauchen können.</p>
+    </div>
   </div>
+
+  <section class="section" id="coverage">
+    <div class="wrap">
+      <span class="section-label">Ausgewählte Platzierungen</span>
+      <h2 class="section-title">In Print erschienen.<br>Mit Bestand.</h2>
+      <p class="section-body">Eine Auswahl an erreichten Platzierungen aus verschiedenen Kampagnen — ausgewählt nach redaktioneller Qualität, thematischer Relevanz und dauerhaftem Suchwert. Nicht nach Domain Authority allein.</p>
+
+      <div class="coverage-stats">
+        <div><div class="cov-stat-num">50+</div><div class="cov-stat-label">Platzierungen</div></div>
+        <div><div class="cov-stat-num">National</div><div class="cov-stat-label">Print &amp; Digital</div></div>
+        <div><div class="cov-stat-num">Tier 1</div><div class="cov-stat-label">Reichweite</div></div>
+      </div>
+
+      <div class="coverage-grid">
+        <a class="coverage-card" href="https://metro.co.uk/2026/04/02/arsenal-send-message-manchester-united-myles-lewis-skelly-transfer-27831714/" target="_blank" rel="noopener noreferrer">
+          <div class="coverage-card-top"><span class="coverage-publication">Metro</span><span class="coverage-tag">Football</span></div>
+          <div class="coverage-metrics">
+            <span class="coverage-metric"><span class="coverage-metric-label">DR</span><span class="coverage-metric-value is-placeholder">&mdash;</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">AS</span><span class="coverage-metric-value is-placeholder">&mdash;</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">Traffic</span><span class="coverage-metric-value is-placeholder">&mdash;/mo</span></span>
+          </div>
+          <p class="coverage-headline">Arsenal send message to Manchester United over Myles Lewis-Skelly transfer</p>
+          <div class="coverage-meta"><span>Apr. 2026</span><span class="coverage-meta-link">Zum Artikel</span></div>
+        </a>
+
+        <a class="coverage-card" href="https://www.liverpool.com/liverpool-fc-news/features/arsenal-legend-deeply-concerned-arne-33544245" target="_blank" rel="noopener noreferrer">
+          <div class="coverage-card-top"><span class="coverage-publication">Liverpool.com</span><span class="coverage-tag">Football</span></div>
+          <div class="coverage-metrics">
+            <span class="coverage-metric"><span class="coverage-metric-label">DR</span><span class="coverage-metric-value is-placeholder">&mdash;</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">AS</span><span class="coverage-metric-value is-placeholder">&mdash;</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">Traffic</span><span class="coverage-metric-value is-placeholder">&mdash;/mo</span></span>
+          </div>
+          <p class="coverage-headline">Arsenal legend deeply concerned about Arne Slot</p>
+          <div class="coverage-meta"><span>2026</span><span class="coverage-meta-link">Zum Artikel</span></div>
+        </a>
+
+        <a class="coverage-card" href="https://www.football.london/arsenal-fc/transfer-news/arsenal-transfer-myles-lewis-skelly-33532554" target="_blank" rel="noopener noreferrer">
+          <div class="coverage-card-top"><span class="coverage-publication">Football London</span><span class="coverage-tag">Transfer</span></div>
+          <div class="coverage-metrics">
+            <span class="coverage-metric"><span class="coverage-metric-label">DR</span><span class="coverage-metric-value is-placeholder">&mdash;</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">AS</span><span class="coverage-metric-value is-placeholder">&mdash;</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">Traffic</span><span class="coverage-metric-value is-placeholder">&mdash;/mo</span></span>
+          </div>
+          <p class="coverage-headline">Arsenal transfer latest: Myles Lewis-Skelly</p>
+          <div class="coverage-meta"><span>2026</span><span class="coverage-meta-link">Zum Artikel</span></div>
+        </a>
+
+        <a class="coverage-card" href="https://www.leeds-live.co.uk/sport/leeds-united/sky-sports-pundit-names-two-33580456" target="_blank" rel="noopener noreferrer">
+          <div class="coverage-card-top"><span class="coverage-publication">Leeds Live</span><span class="coverage-tag">Football</span></div>
+          <div class="coverage-metrics">
+            <span class="coverage-metric"><span class="coverage-metric-label">DR</span><span class="coverage-metric-value is-placeholder">&mdash;</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">AS</span><span class="coverage-metric-value is-placeholder">&mdash;</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">Traffic</span><span class="coverage-metric-value is-placeholder">&mdash;/mo</span></span>
+          </div>
+          <p class="coverage-headline">Sky Sports pundit names two Leeds United players</p>
+          <div class="coverage-meta"><span>2026</span><span class="coverage-meta-link">Zum Artikel</span></div>
+        </a>
+
+        <a class="coverage-card" href="https://www.hulldailymail.co.uk/sport/football/football-news/hull-citys-automatic-promotion-credentials-10798514" target="_blank" rel="noopener noreferrer">
+          <div class="coverage-card-top"><span class="coverage-publication">Hull Daily Mail</span><span class="coverage-tag">Football</span></div>
+          <div class="coverage-metrics">
+            <span class="coverage-metric"><span class="coverage-metric-label">DR</span><span class="coverage-metric-value is-placeholder">&mdash;</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">AS</span><span class="coverage-metric-value is-placeholder">&mdash;</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">Traffic</span><span class="coverage-metric-value is-placeholder">&mdash;/mo</span></span>
+          </div>
+          <p class="coverage-headline">Hull City's automatic promotion credentials assessed</p>
+          <div class="coverage-meta"><span>2026</span><span class="coverage-meta-link">Zum Artikel</span></div>
+        </a>
+
+        <a class="coverage-card" href="https://www.mirror.co.uk/sport/football/news/wrexham-ryan-reynolds-phil-parkinson-36713622" target="_blank" rel="noopener noreferrer">
+          <div class="coverage-card-top"><span class="coverage-publication">Mirror</span><span class="coverage-tag">Football</span></div>
+          <div class="coverage-metrics">
+            <span class="coverage-metric"><span class="coverage-metric-label">DR</span><span class="coverage-metric-value is-placeholder">&mdash;</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">AS</span><span class="coverage-metric-value is-placeholder">&mdash;</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">Traffic</span><span class="coverage-metric-value is-placeholder">&mdash;/mo</span></span>
+          </div>
+          <p class="coverage-headline">Wrexham, Ryan Reynolds and Phil Parkinson &mdash; inside the story</p>
+          <div class="coverage-meta"><span>2026</span><span class="coverage-meta-link">Zum Artikel</span></div>
+        </a>
+
+        <a class="coverage-card" href="https://www.liverpoolecho.co.uk/sport/football/football-news/everton-supporters-need-horrible-again-33295487" target="_blank" rel="noopener noreferrer">
+          <div class="coverage-card-top"><span class="coverage-publication">Liverpool Echo</span><span class="coverage-tag">Football</span></div>
+          <div class="coverage-metrics">
+            <span class="coverage-metric"><span class="coverage-metric-label">DR</span><span class="coverage-metric-value is-placeholder">&mdash;</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">AS</span><span class="coverage-metric-value is-placeholder">&mdash;</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">Traffic</span><span class="coverage-metric-value is-placeholder">&mdash;/mo</span></span>
+          </div>
+          <p class="coverage-headline">Everton supporters need the team to be horrible again</p>
+          <div class="coverage-meta"><span>2026</span><span class="coverage-meta-link">Zum Artikel</span></div>
+        </a>
+
+        <a class="coverage-card" href="https://www.chroniclelive.co.uk/sport/football/football-news/eddie-howe-warned-over-difficult-33410616" target="_blank" rel="noopener noreferrer">
+          <div class="coverage-card-top"><span class="coverage-publication">ChronicleLive</span><span class="coverage-tag">Football</span></div>
+          <div class="coverage-metrics">
+            <span class="coverage-metric"><span class="coverage-metric-label">DR</span><span class="coverage-metric-value is-placeholder">&mdash;</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">AS</span><span class="coverage-metric-value is-placeholder">&mdash;</span></span>
+            <span class="coverage-metric-sep">/</span>
+            <span class="coverage-metric"><span class="coverage-metric-label">Traffic</span><span class="coverage-metric-value is-placeholder">&mdash;/mo</span></span>
+          </div>
+          <p class="coverage-headline">Eddie Howe warned over difficult decision ahead</p>
+          <div class="coverage-meta"><span>2026</span><span class="coverage-meta-link">Zum Artikel</span></div>
+        </a>
+      </div>
+
+      <p class="coverage-source-note">DR: Ahrefs &middot; AS &amp; organischer Traffic: Semrush. Alle Angaben sind Schätzungen Dritter.</p>
+    </div>
+  </section>
+
   <section class="section">
     <div class="wrap">
-      <span class="section-label">Coverage</span>
-      <h2 class="section-title">Was starke Coverage ausmacht.</h2>
-      <p class="section-body">Gute Digital PR sollte mehr als einen kurzlebigen Spike erzeugen. Die besten Kampagnen erzielen relevante Platzierungen, die Markenpräsenz aufbauen und die Suchperformance noch lange nach Kampagnenende unterstützen.</p>
+      <span class="section-label">Qualität statt Quantität</span>
+      <h2 class="section-title">Was starke Platzierungen ausmacht.</h2>
+      <p class="section-body">Gute Digital PR erzeugt mehr als einen kurzfristigen Ausschlag. Die stärksten Kampagnen erzielen relevante Platzierungen, die Markenpräsenz aufbauen und die Suchperformance noch lange nach Ende der Kampagne stützen.</p>
       <div class="services-grid" style="margin-top:3rem;">
-        <div class="service-card"><div class="service-num">01 — Relevanz</div><h3>Coverage an den richtigen Stellen</h3><p>Nicht einfach irgendein Link oder eine Erwähnung. Das Ziel sind Platzierungen in Publikationen, Branchentiteln und thematischen Umfeldern, die zur Marke und zur Geschichte wirklich passen.</p></div>
-        <div class="service-card"><div class="service-num">02 — Autorität</div><h3>Signale, die sich summieren</h3><p>Hochwertige Platzierungen beeinflussen die Wahrnehmung weit über das Kampagnenfenster hinaus — sie stärken die Markensuche, das Linkprofil und die Trust-Signale, die für Suchmaschinen wichtig sind.</p></div>
-        <div class="service-card"><div class="service-num">03 — Narrative</div><h3>Eine Geschichte, die bleibt</h3><p>Die stärksten Kampagnen bauen auf einem klaren Winkel auf, den ein Journalist schnell nutzen kann — Originaldaten, ein prägnantes Experten-Statement oder ein zeitgemäßer Standpunkt.</p></div>
-        <div class="service-card"><div class="service-num">04 — Messung</div><h3>Ergebnisse jenseits von Erwähnungszahlen</h3><p>Ich schaue auf Platzierungsqualität, thematische Relevanz, Referral-Sichtbarkeit und wie Coverage die übergeordnete Suchstrategie unterstützt — nicht nur eine rohe Anzahl von Erwähnungen.</p></div>
+        <div class="service-card">
+          <div class="service-num">01 &mdash; Relevanz</div>
+          <h3>Platzierungen, die passen</h3>
+          <p>Nicht irgendein Link oder eine Erwähnung. Ziel sind Platzierungen in Publikationen, Branchentiteln und thematischen Umfeldern, die zur Marke und zur Geschichte tatsächlich passen.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-num">02 &mdash; Autorität</div>
+          <h3>Signale, die nachwirken</h3>
+          <p>Hochwertige Platzierungen beeinflussen die Wahrnehmung weit über das Kampagnenfenster hinaus — sie stärken die Markensuche, das Linkprofil und die Vertrauenssignale, auf die Suchmaschinen achten.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-num">03 &mdash; Narrativ</div>
+          <h3>Eine Geschichte, die hängenbleibt</h3>
+          <p>Die stärksten Kampagnen bauen auf einem klaren Winkel auf, den ein Journalist direkt verwenden kann — Originaldaten, ein prägnantes Expertenstatement oder ein zeitgemäßer Standpunkt zu einem aktuellen Thema.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-num">04 &mdash; Messung</div>
+          <h3>Ergebnisse jenseits von Erwähnungszahlen</h3>
+          <p>Ich schaue auf Platzierungsqualität, thematische Relevanz, Referral-Sichtbarkeit und wie die Coverage die übergeordnete Suchstrategie stützt — nicht nur eine rohe Anzahl von Erwähnungen oder einen DR-Score.</p>
+        </div>
       </div>
     </div>
   </section>
+
   <div class="wrap narrow">
-    <div class="detail-card"><span class="label">Fokus</span><p>Digital-PR-Kampagnen mit klarem Bezug zu Markensichtbarkeit und organischer Suchperformance — nicht Coverage um der Coverage willen.</p></div>
-    <div class="content-section"><h2>Womit ich unterstützen kann</h2><p>Kampagnenentwicklung · Medien-Outreach · Digital-PR-Strategie · Kreative Ideenfindung · Coverage-Reporting · Linkaufbau durch PR</p></div>
+    <div class="detail-card">
+      <span class="label">Fokus</span>
+      <p>Digital-PR-Kampagnen mit klarem Bezug zu Markensichtbarkeit und organischer Suchperformance — keine Coverage um der Coverage willen.</p>
+    </div>
+    <div class="content-section">
+      <h2>Womit ich helfen kann</h2>
+      <p>Kampagnenentwicklung &middot; Medien-Outreach &middot; Digital-PR-Strategie &middot; Kreative Konzeption &middot; Coverage-Reporting &middot; Linkaufbau durch PR</p>
+    </div>
   </div>
-  <section class="section"><div class="wrap"><div class="contact-block"><div><h2>Digital-PR-Unterstützung gesucht?</h2><p>Verfügbar für Kampagnen, Strategie oder eine neue Perspektive auf Ihren aktuellen Ansatz.</p></div><a href="mailto:contact@liamreaney.com" class="btn-primary">Kontakt aufnehmen</a></div></div></section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="contact-block">
+        <div>
+          <h2>Digital-PR-Unterstützung gesucht?</h2>
+          <p>Verfügbar für Kampagnen, Strategie oder einen frischen Blick auf den aktuellen Ansatz.</p>
+        </div>
+        <a href="mailto:contact@liamreaney.com" class="btn-primary">Kontakt aufnehmen</a>
+      </div>
+    </div>
+  </section>
+
 </main>
 <footer class="footer">
   <div class="wrap footer-inner">
-    <span>© 2026 Liam Reaney</span>
+    <span>&copy; 2026 Liam Reaney</span>
     <div class="footer-right">
       <a href="/digital-pr/" title="English">EN</a>
       <a href="mailto:contact@liamreaney.com">Kontakt</a>
