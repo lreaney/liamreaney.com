@@ -1,12 +1,37 @@
 /* ============================================================
    LIAM REANEY — Agency redesign v3
-   Accent: Sky blue #38BDF8
+   Accent: Sky blue
    Font: Cabinet Grotesk (display) + Satoshi (body)
+   Default: LIGHT MODE — manual toggle to dark
    ============================================================ */
 
 @import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800,900&f[]=satoshi@400,500,700&display=swap');
 
-:root {
+/* ── LIGHT MODE (default) ── */
+:root, [data-theme="light"] {
+  --bg:            #f5f4f0;
+  --surface-1:     #f9f8f5;
+  --surface-2:     #ededea;
+  --border:        rgba(0,0,0,0.08);
+  --border-strong: rgba(0,0,0,0.14);
+  --text:          #111318;
+  --text-muted:    #5a5e6a;
+  --text-faint:    #a0a4af;
+  --accent:        #0284c7;
+  --accent-dim:    rgba(2,132,199,0.08);
+  --accent-glow:   0 0 40px rgba(2,132,199,0.18);
+  --nav-bg:        rgba(245,244,240,0.82);
+  --font-display:  'Cabinet Grotesk', 'Helvetica Neue', sans-serif;
+  --font-body:     'Satoshi', 'Inter', sans-serif;
+  --sp-2: 0.5rem; --sp-3: 0.75rem; --sp-4: 1rem; --sp-6: 1.5rem;
+  --sp-8: 2rem;   --sp-12: 3rem;   --sp-16: 4rem; --sp-24: 6rem;
+  --r-sm: 8px; --r-md: 14px; --r-lg: 20px; --r-xl: 28px;
+  --max-w: 1200px; --narrow: 760px;
+  --ease: 200ms cubic-bezier(0.16,1,0.3,1);
+}
+
+/* ── DARK MODE ── */
+[data-theme="dark"] {
   --bg:            #0b0c0f;
   --surface-1:     #111318;
   --surface-2:     #181b22;
@@ -18,18 +43,12 @@
   --accent:        #38bdf8;
   --accent-dim:    rgba(56,189,248,0.1);
   --accent-glow:   0 0 40px rgba(56,189,248,0.2);
-  --font-display:  'Cabinet Grotesk', 'Helvetica Neue', sans-serif;
-  --font-body:     'Satoshi', 'Inter', sans-serif;
-  --sp-2: 0.5rem; --sp-3: 0.75rem; --sp-4: 1rem; --sp-6: 1.5rem;
-  --sp-8: 2rem;   --sp-12: 3rem;   --sp-16: 4rem; --sp-24: 6rem;
-  --r-sm: 8px; --r-md: 14px; --r-lg: 20px; --r-xl: 28px;
-  --max-w: 1200px; --narrow: 760px;
-  --ease: 200ms cubic-bezier(0.16,1,0.3,1);
+  --nav-bg:        rgba(11,12,15,0.82);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; transition: background 250ms ease, color 250ms ease; }
 img, svg { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; transition: color var(--ease); }
 p { max-width: 68ch; }
@@ -42,7 +61,8 @@ p { max-width: 68ch; }
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(20px) saturate(180%);
-  background: rgba(11,12,15,0.75);
+  background: var(--nav-bg);
+  transition: background 250ms ease;
 }
 .nav-inner {
   display: flex; align-items: center; justify-content: space-between;
@@ -63,6 +83,19 @@ p { max-width: 68ch; }
   transition: border-color var(--ease), background var(--ease);
 }
 .nav-cta:hover { border-color: var(--accent); background: var(--accent-dim); }
+
+/* ── THEME TOGGLE ── */
+.theme-toggle {
+  display: flex; align-items: center; justify-content: center;
+  width: 38px; height: 38px;
+  border: 1px solid var(--border-strong); border-radius: var(--r-sm);
+  background: none; cursor: pointer;
+  color: var(--text-muted);
+  transition: border-color var(--ease), color var(--ease), background var(--ease);
+  flex-shrink: 0;
+}
+.theme-toggle:hover { border-color: var(--accent); color: var(--text); background: var(--accent-dim); }
+.theme-toggle svg { width: 17px; height: 17px; }
 
 /* ── PAGE HEADER BAND ── */
 .page-header {
@@ -98,8 +131,11 @@ p { max-width: 68ch; }
 .hero-glow {
   position: absolute; top: -160px; left: 50%; transform: translateX(-50%);
   width: 900px; height: 600px; border-radius: 50%;
-  background: radial-gradient(ellipse, rgba(56,189,248,0.06) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(2,132,199,0.05) 0%, transparent 70%);
   pointer-events: none;
+}
+[data-theme="dark"] .hero-glow {
+  background: radial-gradient(ellipse, rgba(56,189,248,0.06) 0%, transparent 70%);
 }
 .hero-badge {
   display: inline-flex; align-items: center; gap: 0.5rem;
@@ -145,11 +181,11 @@ p { max-width: 68ch; }
 .btn-primary {
   display: inline-flex; align-items: center; gap: 0.5rem;
   padding: 0.85rem 1.6rem; background: var(--accent);
-  color: #0b0c0f; font-weight: 700; font-size: 0.95rem;
+  color: #fff; font-weight: 700; font-size: 0.95rem;
   border-radius: var(--r-sm);
   transition: box-shadow var(--ease), transform var(--ease);
 }
-.btn-primary:hover { box-shadow: var(--accent-glow); transform: translateY(-1px); color: #0b0c0f; }
+.btn-primary:hover { box-shadow: var(--accent-glow); transform: translateY(-1px); color: #fff; }
 .btn-ghost {
   display: inline-flex; align-items: center; gap: 0.5rem;
   padding: 0.85rem 1.6rem;
@@ -172,6 +208,7 @@ p { max-width: 68ch; }
   font-weight: 800; letter-spacing: -0.05em; line-height: 1;
   color: var(--text); margin-bottom: var(--sp-4);
 }
+.section-body { color: var(--text-muted); font-size: 1.05rem; max-width: 60ch; margin-top: var(--sp-4); }
 
 /* ── ABOUT ── */
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-16); align-items: start; }

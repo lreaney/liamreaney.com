@@ -6,7 +6,13 @@
   <title>Digital PR Consultant Munich — Liam Reaney</title>
   <meta name="description" content="Digital PR consulting from Liam Reaney in Munich. Combining campaign strategy, outreach, and media coverage with measurable SEO impact.">
   <link rel="canonical" href="https://liamreaney.com/digital-pr/">
-  <link rel="stylesheet" href="../css/styles.css?v=5">
+  <link rel="stylesheet" href="../css/styles.css?v=6">
+  <script>
+    (function(){
+      var t = localStorage.getItem('theme');
+      document.documentElement.setAttribute('data-theme', t || 'light');
+    })();
+  </script>
 </head>
 <body>
 <nav class="nav" aria-label="Site navigation">
@@ -16,6 +22,11 @@
       <a href="/" class="hide-mobile">Home</a>
       <a href="/seo/">SEO</a>
       <a href="/digital-pr/" aria-current="page">Digital PR</a>
+      <button class="theme-toggle" aria-label="Toggle dark mode" onclick="toggleTheme()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="theme-icon">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
       <a href="mailto:contact@liamreaney.com" class="nav-cta">Get in touch</a>
     </div>
   </div>
@@ -42,57 +53,43 @@
       <p>Mass outreach burns goodwill fast. My approach is targeted, personal, and built on understanding what journalists and editors are looking for in their specific beats.</p>
     </div>
   </div>
-
   <section class="section">
     <div class="wrap">
       <span class="section-label">Coverage</span>
       <h2 class="section-title">What strong coverage looks like.</h2>
       <p class="section-body">Great digital PR should do more than create a short-lived spike. The best campaigns earn relevant placements that build brand presence and continue to support search performance long after the campaign closes.</p>
       <div class="services-grid" style="margin-top:3rem;">
-        <div class="service-card">
-          <div class="service-num">01 — Relevance</div>
-          <h3>Coverage in the right places</h3>
-          <p>Not just any link or mention. The goal is placement in publications, industry titles, and topical environments that make genuine sense for the brand and the story being told.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-num">02 — Authority</div>
-          <h3>Signals that compound</h3>
-          <p>High-quality placements influence perception well beyond the campaign window — supporting branded search, link profile strength, and the wider trust signals that matter to search engines.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-num">03 — Narrative</div>
-          <h3>A story people remember</h3>
-          <p>The strongest campaigns are built around a clear angle a journalist can use quickly — original data, a sharp expert take, or a timely point of view tied to something already in the news.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-num">04 — Measurement</div>
-          <h3>Outcomes beyond mention counts</h3>
-          <p>I look at placement quality, topical relevance, referral visibility, and how coverage feeds the broader search strategy — not just a raw number of mentions or a domain authority score.</p>
-        </div>
+        <div class="service-card"><div class="service-num">01 — Relevance</div><h3>Coverage in the right places</h3><p>Not just any link or mention. The goal is placement in publications, industry titles, and topical environments that make genuine sense for the brand and the story being told.</p></div>
+        <div class="service-card"><div class="service-num">02 — Authority</div><h3>Signals that compound</h3><p>High-quality placements influence perception well beyond the campaign window — supporting branded search, link profile strength, and the wider trust signals that matter to search engines.</p></div>
+        <div class="service-card"><div class="service-num">03 — Narrative</div><h3>A story people remember</h3><p>The strongest campaigns are built around a clear angle a journalist can use quickly — original data, a sharp expert take, or a timely point of view tied to something already in the news.</p></div>
+        <div class="service-card"><div class="service-num">04 — Measurement</div><h3>Outcomes beyond mention counts</h3><p>I look at placement quality, topical relevance, referral visibility, and how coverage feeds the broader search strategy — not just a raw number of mentions or a domain authority score.</p></div>
       </div>
     </div>
   </section>
-
   <div class="wrap narrow">
-    <div class="detail-card">
-      <span class="label">Focus</span>
-      <p>Digital PR campaigns built with a clear connection to brand visibility and organic search performance — not just coverage for coverage's sake.</p>
-    </div>
-    <div class="content-section">
-      <h2>What I can support</h2>
-      <p>Campaign development · Media outreach · Digital PR strategy · Creative ideation · Coverage reporting · Link acquisition via PR</p>
-    </div>
+    <div class="detail-card"><span class="label">Focus</span><p>Digital PR campaigns built with a clear connection to brand visibility and organic search performance — not just coverage for coverage's sake.</p></div>
+    <div class="content-section"><h2>What I can support</h2><p>Campaign development · Media outreach · Digital PR strategy · Creative ideation · Coverage reporting · Link acquisition via PR</p></div>
   </div>
-
-  <section class="section">
-    <div class="wrap">
-      <div class="contact-block">
-        <div><h2>Need Digital PR support?</h2><p>Available for campaigns, strategy, or a fresh perspective on your current approach.</p></div>
-        <a href="mailto:contact@liamreaney.com" class="btn-primary">Get in touch</a>
-      </div>
-    </div>
-  </section>
+  <section class="section"><div class="wrap"><div class="contact-block"><div><h2>Need Digital PR support?</h2><p>Available for campaigns, strategy, or a fresh perspective on your current approach.</p></div><a href="mailto:contact@liamreaney.com" class="btn-primary">Get in touch</a></div></div></section>
 </main>
 <footer class="footer"><div class="wrap footer-inner"><span>© 2026 Liam Reaney</span><a href="/">← Back to home</a></div></footer>
+<script>
+function syncIcon(){
+  var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+  var icon = document.getElementById('theme-icon');
+  if(!icon) return;
+  icon.innerHTML = dark
+    ? '<circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>'
+    : '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+}
+function toggleTheme(){
+  var current = document.documentElement.getAttribute('data-theme');
+  var next = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  syncIcon();
+}
+syncIcon();
+</script>
 </body>
 </html>
