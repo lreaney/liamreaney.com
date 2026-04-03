@@ -9,7 +9,7 @@
   <link rel="alternate" hreflang="en" href="https://liamreaney.com/digital-pr/">
   <link rel="alternate" hreflang="de" href="https://liamreaney.com/de/digital-pr/">
   <link rel="alternate" hreflang="x-default" href="https://liamreaney.com/digital-pr/">
-  <link rel="stylesheet" href="../css/styles.css?v=7">
+  <link rel="stylesheet" href="../css/styles.css?v=8">
   <style>
     .coverage-grid {
       display: grid;
@@ -159,13 +159,16 @@
       <a href="/" class="hide-mobile">Home</a>
       <a href="/seo/">SEO</a>
       <a href="/digital-pr/" aria-current="page">Digital PR</a>
-      <a href="/de/digital-pr/" title="Deutsch">DE</a>
+      <a href="/de/digital-pr/" title="Deutsch" class="hide-mobile">DE</a>
       <button class="theme-toggle" aria-label="Toggle dark mode" onclick="toggleTheme()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="theme-icon">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
         </svg>
       </button>
-      <a href="mailto:contact@liamreaney.com" class="nav-cta">Get in touch</a>
+      <a href="mailto:contact@liamreaney.com" class="nav-cta hide-mobile">Get in touch</a>
+      <a href="mailto:contact@liamreaney.com" class="nav-cta-icon show-mobile" aria-label="Get in touch">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+      </a>
     </div>
   </div>
 </nav>
@@ -393,7 +396,15 @@
   <section class="section"><div class="wrap"><div class="contact-block"><div><h2>Need Digital PR support?</h2><p>Available for campaigns, strategy, or a fresh perspective on your current approach.</p></div><a href="mailto:contact@liamreaney.com" class="btn-primary">Get in touch</a></div></div></section>
 
 </main>
-<footer class="footer"><div class="wrap footer-inner"><span>© 2026 Liam Reaney</span><a href="/">← Back to home</a></div></footer>
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>© 2026 Liam Reaney</span>
+    <div class="footer-right">
+      <a href="/de/digital-pr/" title="Deutsch">DE</a>
+      <a href="mailto:contact@liamreaney.com">Get in touch</a>
+    </div>
+  </div>
+</footer>
 <script>
 function syncIcon(){
   var dark = document.documentElement.getAttribute('data-theme') === 'dark';
