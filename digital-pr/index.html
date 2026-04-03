@@ -9,7 +9,125 @@
   <link rel="alternate" hreflang="en" href="https://liamreaney.com/digital-pr/">
   <link rel="alternate" hreflang="de" href="https://liamreaney.com/de/digital-pr/">
   <link rel="alternate" hreflang="x-default" href="https://liamreaney.com/digital-pr/">
-  <link rel="stylesheet" href="../css/styles.css?v=6">
+  <link rel="stylesheet" href="../css/styles.css?v=7">
+  <style>
+    /* ── COVERAGE SECTION ── */
+    .coverage-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
+      gap: var(--sp-6);
+      margin-top: var(--sp-12);
+    }
+    .coverage-card {
+      background: var(--surface-1);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: var(--sp-8);
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-4);
+      transition: border-color var(--ease), box-shadow var(--ease), transform var(--ease);
+      text-decoration: none;
+      color: inherit;
+    }
+    .coverage-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      transform: translateY(-2px);
+    }
+    .coverage-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--sp-4);
+    }
+    .coverage-publication {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--text);
+    }
+    .coverage-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-dim);
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .coverage-headline {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+      max-width: 100%;
+    }
+    .coverage-meta {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-4);
+      font-size: 0.8rem;
+      color: var(--text-faint);
+      margin-top: auto;
+      padding-top: var(--sp-2);
+      border-top: 1px solid var(--border);
+    }
+    .coverage-meta-date { color: var(--text-faint); }
+    .coverage-meta-link {
+      margin-left: auto;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .coverage-meta-link::after {
+      content: '\2197';
+      font-size: 0.75rem;
+    }
+    /* Placeholder state */
+    .coverage-card.is-placeholder {
+      border-style: dashed;
+      opacity: 0.45;
+      pointer-events: none;
+    }
+    .coverage-card.is-placeholder .coverage-publication,
+    .coverage-card.is-placeholder .coverage-headline {
+      background: var(--border);
+      color: transparent;
+      border-radius: var(--r-sm);
+      user-select: none;
+    }
+    /* Stats strip */
+    .coverage-stats {
+      display: flex;
+      gap: var(--sp-12);
+      padding: var(--sp-8) 0;
+      border-top: 1px solid var(--border);
+      margin-top: var(--sp-8);
+    }
+    .cov-stat-num {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      color: var(--text);
+      line-height: 1;
+    }
+    .cov-stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+    @media (max-width: 640px) {
+      .coverage-stats { gap: var(--sp-8); flex-wrap: wrap; }
+    }
+  </style>
   <script>
     (function(){
       var t = localStorage.getItem('theme');
@@ -35,22 +153,141 @@
     </div>
   </div>
 </nav>
+
 <header class="page-header">
   <div class="wrap narrow">
     <span class="kicker">Digital PR</span>
     <h1>Coverage that earns its place.</h1>
-    <p>I've worked on digital PR both in-house and alongside external agencies — developing campaigns, managing outreach, and landing coverage in publications that matter for brand and search alike.</p>
+    <p>I’ve worked on digital PR both in-house and alongside external agencies — developing campaigns, managing outreach, and landing coverage in publications that matter for brand and search alike.</p>
     <div class="header-actions">
       <a href="mailto:contact@liamreaney.com" class="btn-primary">Get in touch</a>
       <a href="/seo/" class="btn-ghost">SEO →</a>
     </div>
   </div>
 </header>
+
 <main>
+
+  <!-- APPROACH -->
   <div class="wrap narrow">
     <div class="content-section"><h2>Campaign thinking, not template execution</h2><p>Good digital PR requires original ideas and strong editorial instincts. I develop campaigns built around genuine news value — the kind that earn placements because editors actually want to cover them.</p></div>
     <div class="content-section"><h2>Outreach that respects relationships</h2><p>Mass outreach burns goodwill fast. My approach is targeted, personal, and built on understanding what journalists and editors are looking for in their specific beats.</p></div>
   </div>
+
+  <!-- COVERAGE PORTFOLIO -->
+  <section class="section" id="coverage">
+    <div class="wrap">
+      <span class="section-label">Selected Coverage</span>
+      <h2 class="section-title">Placed in print.<br>Built to last.</h2>
+      <p class="section-body">A selection of placements earned across campaigns. Each one chosen for editorial quality, topical relevance, and lasting search value — not domain authority alone.</p>
+
+      <!-- Stats strip: update numbers as you add real examples -->
+      <div class="coverage-stats">
+        <div><div class="cov-stat-num">Tier 1</div><div class="cov-stat-label">Publication reach</div></div>
+        <div><div class="cov-stat-num">National</div><div class="cov-stat-label">Print &amp; digital</div></div>
+        <div><div class="cov-stat-num">10+</div><div class="cov-stat-label">Years of placements</div></div>
+      </div>
+
+      <!-- Coverage cards -->
+      <!-- TO ADD A PLACEMENT:
+           1. Copy one <a class="coverage-card"> block
+           2. Set href to the live article URL
+           3. Update publication, tag, headline, and date
+           4. Remove class "is-placeholder" if present
+      -->
+      <div class="coverage-grid">
+
+        <!-- REAL EXAMPLE TEMPLATE (uncomment and fill in)
+        <a class="coverage-card" href="https://example.com/article" target="_blank" rel="noopener noreferrer">
+          <div class="coverage-card-top">
+            <span class="coverage-publication">Publication Name</span>
+            <span class="coverage-tag">Category</span>
+          </div>
+          <p class="coverage-headline">Headline of the article as it appeared</p>
+          <div class="coverage-meta">
+            <span class="coverage-meta-date">Mon YYYY</span>
+            <span class="coverage-meta-link">Read article</span>
+          </div>
+        </a>
+        -->
+
+        <!-- PLACEHOLDER 1 -->
+        <div class="coverage-card is-placeholder" aria-hidden="true">
+          <div class="coverage-card-top">
+            <span class="coverage-publication">Publication Name</span>
+            <span class="coverage-tag">Category</span>
+          </div>
+          <p class="coverage-headline">Headline of the article as it appeared in the publication</p>
+          <div class="coverage-meta">
+            <span class="coverage-meta-date">Mon YYYY</span>
+          </div>
+        </div>
+
+        <!-- PLACEHOLDER 2 -->
+        <div class="coverage-card is-placeholder" aria-hidden="true">
+          <div class="coverage-card-top">
+            <span class="coverage-publication">Publication Name</span>
+            <span class="coverage-tag">Category</span>
+          </div>
+          <p class="coverage-headline">Headline of the article as it appeared in the publication</p>
+          <div class="coverage-meta">
+            <span class="coverage-meta-date">Mon YYYY</span>
+          </div>
+        </div>
+
+        <!-- PLACEHOLDER 3 -->
+        <div class="coverage-card is-placeholder" aria-hidden="true">
+          <div class="coverage-card-top">
+            <span class="coverage-publication">Publication Name</span>
+            <span class="coverage-tag">Category</span>
+          </div>
+          <p class="coverage-headline">Headline of the article as it appeared in the publication</p>
+          <div class="coverage-meta">
+            <span class="coverage-meta-date">Mon YYYY</span>
+          </div>
+        </div>
+
+        <!-- PLACEHOLDER 4 -->
+        <div class="coverage-card is-placeholder" aria-hidden="true">
+          <div class="coverage-card-top">
+            <span class="coverage-publication">Publication Name</span>
+            <span class="coverage-tag">Category</span>
+          </div>
+          <p class="coverage-headline">Headline of the article as it appeared in the publication</p>
+          <div class="coverage-meta">
+            <span class="coverage-meta-date">Mon YYYY</span>
+          </div>
+        </div>
+
+        <!-- PLACEHOLDER 5 -->
+        <div class="coverage-card is-placeholder" aria-hidden="true">
+          <div class="coverage-card-top">
+            <span class="coverage-publication">Publication Name</span>
+            <span class="coverage-tag">Category</span>
+          </div>
+          <p class="coverage-headline">Headline of the article as it appeared in the publication</p>
+          <div class="coverage-meta">
+            <span class="coverage-meta-date">Mon YYYY</span>
+          </div>
+        </div>
+
+        <!-- PLACEHOLDER 6 -->
+        <div class="coverage-card is-placeholder" aria-hidden="true">
+          <div class="coverage-card-top">
+            <span class="coverage-publication">Publication Name</span>
+            <span class="coverage-tag">Category</span>
+          </div>
+          <p class="coverage-headline">Headline of the article as it appeared in the publication</p>
+          <div class="coverage-meta">
+            <span class="coverage-meta-date">Mon YYYY</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT STRONG COVERAGE LOOKS LIKE -->
   <section class="section">
     <div class="wrap">
       <span class="section-label">Coverage</span>
@@ -64,11 +301,14 @@
       </div>
     </div>
   </section>
+
   <div class="wrap narrow">
-    <div class="detail-card"><span class="label">Focus</span><p>Digital PR campaigns built with a clear connection to brand visibility and organic search performance — not just coverage for coverage's sake.</p></div>
+    <div class="detail-card"><span class="label">Focus</span><p>Digital PR campaigns built with a clear connection to brand visibility and organic search performance — not just coverage for coverage’s sake.</p></div>
     <div class="content-section"><h2>What I can support</h2><p>Campaign development · Media outreach · Digital PR strategy · Creative ideation · Coverage reporting · Link acquisition via PR</p></div>
   </div>
+
   <section class="section"><div class="wrap"><div class="contact-block"><div><h2>Need Digital PR support?</h2><p>Available for campaigns, strategy, or a fresh perspective on your current approach.</p></div><a href="mailto:contact@liamreaney.com" class="btn-primary">Get in touch</a></div></div></section>
+
 </main>
 <footer class="footer"><div class="wrap footer-inner"><span>© 2026 Liam Reaney</span><a href="/">← Back to home</a></div></footer>
 <script>
